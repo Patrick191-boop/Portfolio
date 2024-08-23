@@ -1,0 +1,232 @@
+:root {
+    --titlecolor: #da4a32;
+    --fontcolor: #bbd4df;
+    --background: #060a0b;
+    --titlefont: "Oswald", sans-serif;
+    --textfont: "Fira Sans", sans-serif;
+}
+
+*, *::before, *::after {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+    margin-left: 10vw;
+    margin-right: 20vw;
+    padding-top: 100px;
+    background-image: url(Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--background);
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: var(--textfont);
+}
+
+header {
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    z-index: 999;
+
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100px;
+}
+
+nav h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: var(--titlefont);
+    color: var(--titlecolor);
+    margin-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--fontcolor);
+    margin-right: 40px;
+}
+
+nav a:hover {
+    opacity: 1;
+    filter: drop-shadow(0 0 20px #fff);
+    border-top: 1px solid #fff;
+    padding-bottom: 10px;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.welcometext-picture-container {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    height: 800px;
+    border-bottom: 1px solid 
+    var(--fontcolor);
+}
+
+.welcome-text {
+    position: absolute;
+    color: var(--fontcolor);
+    width: 700px;
+    margin: 0 0 0 50px;
+    padding-left: 10px;
+    border-left: 1px solid white;
+
+}
+
+.welcome-text h2 {
+    margin-top: 0;
+    font-size: 3rem;
+    color: var(--titlecolor);
+    font-family: var(--titlefont);
+}
+
+.welcome-text p:first-of-type {
+    font-size: 2rem;
+}
+
+.welcome-text p:last-of-type {
+    font-size: 2rem;
+    color: var(--fontcolor);
+}
+
+.profilepic {
+    position: absolute;
+    width: 800px;
+    left: 40%;
+    bottom: 10px;
+    z-index: -1
+    ;
+}
+
+.welcome-text a {
+    text-decoration: none;
+    color: var(--titlecolor);
+    font-family: var(--titlefont);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.fa-duotone {
+    font-size: 3rem;
+    margin-left: 10px;
+    color: var(--titlecolor);
+    animation: bounce 2s ease infinite;
+}
+
+/* Contact Section */
+
+.wrappercontactsocial {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--fontcolor);
+    border-left: 1px solid var(--fontcolor);
+    margin-left: 50px;
+    margin-top: 100px;
+    padding-left: 10px;
+}
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-right: 10%;
+}
+
+.contactform h1 {
+    color: var(--titlecolor);
+    font-family: var(--titlefont);
+    border-bottom: 1px solid var(--titlecolor);
+    font-size: 2rem;
+}
+
+form > * {
+    border-radius: 5px;
+    border: 1px;
+    margin-bottom: 20px;
+    background-color: var(--fontcolor);
+
+}
+
+.formcontact input {
+    height: 30px;
+    width: 300px;
+}
+
+input, button{
+    display: block;
+}
+
+.formcontact textarea {
+    font-family: var(--textfont);
+    height: 300px;
+    width: 300px;
+    resize: none;
+}
+
+.formcontact button {
+    font-size: 1.2rem;
+    width: 300px;
+    height: 30px;
+    font-family: var(--titlefont);
+    color: var(--titlecolor);    
+}
+
+.formcontact button:hover {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #da4a32);
+    transition: 1s;
+}
+
+/* MY MEDIA ACCOUNTS SECTION */
+
+.social h1 {
+    color: var(--titlecolor);
+    font-family: var(--titlefont);
+    border-bottom: 1px solid var(--titlecolor);
+    font-size: 2rem;
+}
+
+.fa-brands:hover {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #da4a32);
+    transition: 1s;
+}
+
+.social a {
+    text-decoration: none;
+    color: var(--fontcolor);
+}
+
+.social i {
+    font-size: 3rem;
+    padding-right: 30px;
+    padding-bottom: 33px;
+}
+
+.socialicons {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+@keyframes bounce {
+	0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-20px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+
+/* No media query needed (: */
